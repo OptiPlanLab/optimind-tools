@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <style>
   :root {
     --font-sans: 'Rubik', sans-serif;
@@ -553,6 +554,42 @@
     background: rgba(26, 43, 63, 0.3);
   }
 
+  /* --- ICONS --- */
+  .section-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--accent-light);
+    border-radius: var(--radius-sm);
+    color: var(--accent-dark);
+    flex-shrink: 0;
+  }
+
+  .section-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn-icon-inline {
+    width: 16px;
+    height: 16px;
+    vertical-align: -2px;
+  }
+
+  .time-badge-icon {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+
   /* --- RESPONSIVE --- */
   @media (max-width: 640px) {
     .options-grid { grid-template-columns: 1fr; }
@@ -602,14 +639,14 @@
       השאלון הזה ממפה את הידע שרק אתם מכירים. רוב השאלות סגורות,
       יש כמה שאלות פתוחות — ענו בכמה שיותר פירוט, זה ישפיע ישירות על איכות הסוכנים.
     </p>
-    <div class="time-badge">⏱ כ-15 דקות למילוי</div>
+    <div class="time-badge"><i data-lucide="clock" class="time-badge-icon"></i> כ-15 דקות למילוי</div>
   </div>
 
   <!-- ===== SECTION 1: AUTHORITIES ===== -->
   <div class="section active" id="section-1">
     <div class="section-header">
       <div class="section-tag">חלק 1 מתוך 6</div>
-      <div class="section-title">🏛️ רשויות וגופים</div>
+      <div class="section-title"><span class="section-icon"><i data-lucide="landmark"></i></span> רשויות וגופים</div>
       <div class="section-desc">אילו רשויות וגופים ממשלתיים אתם עובדים מולם? הסוכנים צריכים לזהות מיילים, מסמכים ותהליכים מהגופים האלה.</div>
     </div>
 
@@ -667,7 +704,7 @@
   <div class="section" id="section-2">
     <div class="section-header">
       <div class="section-tag">חלק 2 מתוך 6</div>
-      <div class="section-title">📖 מונחים ושפה מקצועית</div>
+      <div class="section-title"><span class="section-icon"><i data-lucide="book-open"></i></span> מונחים ושפה מקצועית</div>
       <div class="section-desc">הסוכנים צריכים "לדבר את השפה" — מונחים מקצועיים, קיצורים, וביטויים שמשתמשים בהם בתחום.</div>
     </div>
 
@@ -715,7 +752,7 @@
   <div class="section" id="section-3">
     <div class="section-header">
       <div class="section-tag">חלק 3 מתוך 6</div>
-      <div class="section-title">📧 תבניות מיילים</div>
+      <div class="section-title"><span class="section-icon"><i data-lucide="mail"></i></span> תבניות מיילים</div>
       <div class="section-desc">הסוכן שלנו צריך לנתח מיילים מרשויות אוטומטית — לזהות אישורים, דחיות, דרישות להשלמה ועוד. עזרו לנו להבין את המבנה.</div>
     </div>
 
@@ -776,7 +813,7 @@
   <div class="section" id="section-4">
     <div class="section-header">
       <div class="section-tag">חלק 4 מתוך 6</div>
-      <div class="section-title">🤝 ישיבות ופרוטוקולים</div>
+      <div class="section-title"><span class="section-icon"><i data-lucide="users"></i></span> ישיבות ופרוטוקולים</div>
       <div class="section-desc">הסוכן צריך לקרוא סיכומי ישיבות ולחלץ מהם משימות, החלטות ולוחות זמנים אוטומטית.</div>
     </div>
 
@@ -845,7 +882,7 @@
   <div class="section" id="section-5">
     <div class="section-header">
       <div class="section-tag">חלק 5 מתוך 6</div>
-      <div class="section-title">📋 תהליכי אישור ורישוי</div>
+      <div class="section-title"><span class="section-icon"><i data-lucide="clipboard-list"></i></span> תהליכי אישור ורישוי</div>
       <div class="section-desc">הסוכנים צריכים להבין את מחזור החיים של היתרים ואישורים — מהגשת הבקשה ועד לקבלת האישור.</div>
     </div>
 
@@ -898,7 +935,7 @@
   <div class="section" id="section-6">
     <div class="section-header">
       <div class="section-tag">חלק 6 מתוך 6</div>
-      <div class="section-title">🎯 עדיפויות AI</div>
+      <div class="section-title"><span class="section-icon"><i data-lucide="target"></i></span> עדיפויות AI</div>
       <div class="section-desc">עזרו לנו להבין מה הכי חשוב לכם — מה ה-AI צריך לעשות קודם?</div>
     </div>
 
@@ -960,7 +997,7 @@
 
     <div class="nav-buttons">
       <button class="btn btn-secondary" onclick="goToSection(5)">→ חזרה</button>
-      <button class="btn btn-primary" onclick="generateSummary()">📋 סיכום ושליחה</button>
+      <button class="btn btn-primary" onclick="generateSummary()"><i data-lucide="clipboard-check" class="btn-icon-inline"></i> סיכום ושליחה</button>
     </div>
   </div>
 
@@ -968,13 +1005,13 @@
   <div class="section" id="section-summary">
     <div class="section-header">
       <div class="section-tag">סיכום</div>
-      <div class="section-title">✅ תודה רבה!</div>
+      <div class="section-title"><span class="section-icon" style="background:var(--success-light);color:var(--success);"><i data-lucide="circle-check"></i></span> תודה רבה!</div>
       <div class="section-desc">הנה סיכום התשובות שלכם. לחצו על הכפתור כדי להעתיק ולשלוח לבן.</div>
     </div>
 
     <div class="summary-output" id="summaryOutput"></div>
 
-    <button class="copy-btn" id="copyBtn" onclick="copySummary()">📋 העתק לקליפבורד</button>
+    <button class="copy-btn" id="copyBtn" onclick="copySummary()"><i data-lucide="copy" class="btn-icon-inline"></i> העתק לקליפבורד</button>
 
     <div style="margin-top:16px;">
       <button class="btn btn-secondary" onclick="goToSection(6)" style="width:100%;">← חזרה לעריכה</button>
@@ -1157,14 +1194,19 @@
     const text = document.getElementById('summaryOutput').textContent;
     navigator.clipboard.writeText(text).then(() => {
       const btn = document.getElementById('copyBtn');
-      btn.textContent = '✅ הועתק!';
+      btn.innerHTML = '<i data-lucide="check" class="btn-icon-inline"></i> הועתק!';
       btn.classList.add('copied');
+      lucide.createIcons({ nodes: [btn] });
       setTimeout(() => {
-        btn.textContent = '📋 העתק לקליפבורד';
+        btn.innerHTML = '<i data-lucide="copy" class="btn-icon-inline"></i> העתק לקליפבורד';
         btn.classList.remove('copied');
+        lucide.createIcons({ nodes: [btn] });
       }, 2500);
     });
   }
+
+  // Initialize Lucide icons
+  lucide.createIcons();
 </script>
 
 </body>
